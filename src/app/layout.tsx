@@ -9,7 +9,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: "Atomic Habits Pro",
   description:
-    "An AI-powered habit operating system — habit tracking, goals, insights and coaching based on Atomic Habits by James Clear.",
+    "An AI-powered habit operating system — habit tracking, goals, insights and coaching based on Atomic Habits by James Clear. Created by Khadush.",
+  authors: [{ name: "Khadush" }],
+  creator: "Khadush",
 };
 
 const themeInit = `try{document.documentElement.dataset.theme=localStorage.getItem("atomicHabitsTheme")||"dark"}catch(e){}`;

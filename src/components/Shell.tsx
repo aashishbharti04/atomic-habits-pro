@@ -161,7 +161,7 @@ export default function Shell({ children }: { children: React.ReactNode }) {
         </header>
         <main className="page">{children}</main>
         <footer className="app-foot">
-          Atomic Habits Pro · your data stays in your browser (localStorage) · inspired by James Clear
+          Atomic Habits Pro · created by <b>Khadush</b> · your data stays on your device · inspired by James Clear
         </footer>
       </div>
 
