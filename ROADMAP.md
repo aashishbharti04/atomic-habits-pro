@@ -2,22 +2,22 @@
 
 Phased so that every phase ships something usable. Costs stay at $0 until Phase 4 (Claude API usage).
 
-## Phase 0 — Foundation ✅ (done, this repo)
+## Phase 0 — Foundation ✅ (done)
 
 - [x] Next.js + TypeScript + Tailwind scaffold
 - [x] Product vision, roadmap, data model docs
-- [ ] Design system: port the v1 look (Inter, indigo/violet, dark/light themes) into Tailwind tokens
+- [x] Design system: v1 look (Inter, indigo/violet, dark/light themes) as CSS tokens
 
-## Phase 1 — Core app, local-first
+## Phase 1 — Core app, local-first ✅ (done)
 
-Rebuild v1 features as React components with clean domain logic, storing data in localStorage first (no login needed to try the app):
+Rebuilt v1 features as React components with clean domain logic, storing data in localStorage first (no login needed to try the app):
 
-- [ ] Habit CRUD + frequency + skip/vacation + archive
-- [ ] Today view: checklist, progress ring, XP/levels
-- [ ] Tracker calendar + heatmap + insights (strength, streaks, stats)
-- [ ] Goals, Journal, Scorecard, Stacks, Intentions, Contract
-- [ ] Rule-based Coach (port from v1)
-- [ ] v1 JSON import (zero data loss for existing users)
+- [x] Habit CRUD + frequency + skip/vacation (archive → Phase 2)
+- [x] Today view: checklist, progress ring, XP/levels
+- [x] Tracker calendar + heatmap + insights (strength, streaks, stats)
+- [x] Goals, Journal, Scorecard, Stacks, Intentions, Contract
+- [x] Rule-based Coach (ported from v1 as pure functions in `src/lib/logic.ts`)
+- [x] v1 JSON import — same localStorage key and data shape, zero data loss
 
 ## Phase 2 — Accounts & sync (Supabase free tier)
 
