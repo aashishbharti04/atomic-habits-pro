@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Atomic Habits Pro
+
+> Not just a habit tracker. A complete personal growth operating system.
+
+An AI-powered habit platform combining **Atomic Habits principles, behavioral psychology, predictive analytics, and gamification** — the next-generation rebuild of the [Atomic Habits Dashboard v1](https://github.com/aashishbharti04/atomic-habits-dashboard) ([live demo](https://aashishbharti04.github.io/atomic-habits-dashboard/)).
+
+## Status
+
+🚧 **Early development.** The v1 static dashboard is live and fully functional (habits, streaks, calendar, insights, coach, goals, XP, journal, PWA). This repo is the platform rebuild that adds what a static site can't do: accounts, cross-device sync, real AI coaching, notifications, and community.
+
+## Documents
+
+- [VISION.md](VISION.md) — full product vision and the 20 core modules
+- [ROADMAP.md](ROADMAP.md) — phased delivery plan (what ships when)
+- [docs/DATA_MODEL.md](docs/DATA_MODEL.md) — Supabase/PostgreSQL schema draft
+
+## Tech Stack
+
+| Layer | Choice |
+|---|---|
+| Frontend | Next.js (App Router) · React · TypeScript · Tailwind CSS |
+| Backend | Supabase (PostgreSQL, Auth, Realtime, Edge Functions) |
+| AI | Anthropic Claude API (coaching, weekly reports) |
+| Charts | Recharts |
+| Hosting | Vercel (web) · Supabase (data) |
+| Auth | Google · GitHub · Email magic links |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment variables (once Supabase is connected)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create `.env.local`:
 
-## Learn More
+```
+NEXT_PUBLIC_SUPABASE_URL=your-project-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+ANTHROPIC_API_KEY=your-key   # server-side only, for AI coach
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Relationship to v1
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The v1 dashboard remains live and free at [aashishbharti04.github.io/atomic-habits-dashboard](https://aashishbharti04.github.io/atomic-habits-dashboard/). Its JSON export is the planned import format for Pro, so no tracking history is lost when migrating.
