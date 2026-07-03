@@ -7,7 +7,7 @@ import { useApp } from "@/lib/store";
 import { levelInfo, xpTotal } from "@/lib/logic";
 import { QUOTES } from "@/lib/seeds";
 import {
-  AtomIcon, BookOpenIcon, BotIcon, CalendarIcon, ChartIcon, ClipboardIcon,
+  BookOpenIcon, BotIcon, CalendarIcon, ChartIcon, ClipboardIcon,
   DownloadIcon, FileIcon, FlagIcon, HomeIcon, JournalIcon, LinkIcon,
   MoonIcon, SparkleIcon, SunIcon, TargetIcon, UploadIcon,
 } from "./icons";
@@ -105,7 +105,10 @@ export default function Shell({ children }: { children: React.ReactNode }) {
     <div className="app">
       <aside className="sidebar">
         <div className="logo">
-          <div className="logo-mark"><AtomIcon /></div>
+          <div className="logo-mark">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.png" alt="Atomic Habits logo" />
+          </div>
           <div className="logo-text">
             <strong>Atomic Habits</strong>
             <span>1% better every day</span>
